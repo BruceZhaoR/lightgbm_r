@@ -3,3 +3,12 @@
 .RData
 .Ruserdata
 docs/
+src/CMakeCache.txt
+src/CMakeFiles/*
+src/Makefile
+#src/lib_lightgbm.dll
+#src/lightgbm.dll
+src/lib_lightgbm.dll.a
+src/cmake_install.cmake
+src/*.o
+src/*.dll

@@ -10,3 +10,5 @@
 
 # Code copied in at build time
 ^src/CMakeLists.txt$
+^.*\.Rproj$
+^\.Rproj\.user$
