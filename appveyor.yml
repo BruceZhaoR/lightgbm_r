@@ -14,13 +14,15 @@ cache:
   - C:\RLibrary
 
 # Adapt as necessary starting from here
+platform:
+  - x64
 
 build_script:
   - travis-tool.sh install_deps
   - bash.exe ./pkgdown/install-pkgs.sh
 
-test_script:
-  - travis-tool.sh run_tests
+#test_script:
+#  - travis-tool.sh run_tests
 
 on_finish:
   - bash.exe ./pkgdown/build-dll.sh

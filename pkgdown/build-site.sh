@@ -1,2 +1,1 @@
-Rscript -e "devtools::document()"
-Rscript -e "pkgdown::build_site()"
+Rscript -e "devtools::document();pkgdown::build_site()"
