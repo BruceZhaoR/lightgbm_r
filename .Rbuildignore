@@ -1,3 +1,4 @@
+^appveyor\.yml$
 ^build_package.R$
 \.gitkeep$
 
@@ -7,7 +8,6 @@
 \.dll$
 \.out$
 \.bin$
-
 # Code copied in at build time
 ^src/CMakeLists.txt$
 ^.*\.Rproj$

@@ -1,3 +1,5 @@
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/BruceZhaoR/lightgbm_r?branch=master&svg=true)](https://ci.appveyor.com/project/BruceZhaoR/lightgbm_r)
+
 LightGBM R-package
 ==================
 
