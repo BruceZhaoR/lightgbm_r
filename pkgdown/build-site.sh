@@ -1,1 +1,1 @@
-Rscript -e "devtools::document();pkgdown::build_site()"
+Rscript -e "devtools::document();options(pkgdown.internet=FALSE);pkgdown::build_site()"
