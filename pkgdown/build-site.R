@@ -1,6 +1,10 @@
 setwd(".")
 devtools::document()
 
+if (!dir.exists("./docs")) {
+  dir.create("./docs")
+}
+print("========================building pkgdown site====================================")
 #options(pkgdown.internet=FALSE)
 library(pkgdown)
 
