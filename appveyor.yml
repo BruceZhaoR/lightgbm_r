@@ -25,6 +25,9 @@ environment:
       GCC_PATH: mingw_64
       CRAN: https://cran.rstudio.com
 
+platform:
+  - x64
+
 build_script:
   - pandoc -v
   - travis-tool.sh install_deps
