@@ -8,7 +8,9 @@ init:
         Import-Module '..\appveyor-tool.ps1'
 
 install:
-  ps: Bootstrap
+  - ps: Bootstrap
+  - cinst pandoc
+  - ps: $env:Path += ";C:\Program Files (x86)\Pandoc\"
 
 cache:
   - C:\RLibrary
@@ -23,13 +25,8 @@ environment:
       GCC_PATH: mingw_64
       CRAN: https://cran.rstudio.com
 
-before_build：
-  - ps: >-
-        cinst pandoc
-  - ps: $env:Path += ";C:\Program Files (x86)\Pandoc\"
-  - pandoc -v
-
 build_script:
+  - pandoc -v
   - travis-tool.sh install_deps
   - bash.exe ./pkgdown/install-pkgs.sh
   - bash.exe ./pkgdown/build-dll.sh
