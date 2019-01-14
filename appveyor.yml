@@ -12,7 +12,7 @@ install:
 
 cache:
   - C:\RLibrary
-  - C:\Program Files (x86)\Pandoc
+  - C:\Program Files (x86)\Pandoc\
 
 # Adapt as necessary starting from here
 environment:
@@ -24,7 +24,8 @@ environment:
       CRAN: https://cran.rstudio.com
 
 before_build：
-  - cinst pandoc
+  - ps: >-
+        cinst pandoc
   - ps: $env:Path += ";C:\Program Files (x86)\Pandoc\"
   - pandoc -v
 
