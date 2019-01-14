@@ -1,4 +1,4 @@
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/BruceZhaoR/lightgbm_r?branch=master&svg=true)](https://ci.appveyor.com/project/BruceZhaoR/lightgbm_r)
+[![Build status](https://ci.appveyor.com/api/projects/status/5812kvxafwrvr7jq/branch/master?svg=true)](https://ci.appveyor.com/project/BruceZhaoR/lightgbm-r)
 
 LightGBM R-package
 ==================
