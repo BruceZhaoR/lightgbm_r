@@ -15,8 +15,16 @@ cache:
   - C:\Program Files (x86)\Pandoc\
 
 # Adapt as necessary starting from here
-platform:
-  - x64
+environment:
+  matrix:
+    - R_VERSION: stable
+      R_ARCH: x64
+      GCC_PATH: mingw_64
+      CRAN: https://cran.rstudio.com
+
+build_script:
+  - travis-tool.sh install_deps
+  - bash.exe ./pkgdown/install-pkgs.sh
 
 before_test:
   - ps: >-
@@ -25,10 +33,6 @@ before_test:
       }
   - ps: $env:Path += ";C:\Program Files (x86)\Pandoc\"
   - pandoc -v
-
-build_script:
-  - travis-tool.sh install_deps
-  - bash.exe ./pkgdown/install-pkgs.sh
 
 #test_script:
 #  - travis-tool.sh run_tests
