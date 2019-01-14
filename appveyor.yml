@@ -26,7 +26,7 @@ build_script:
 
 on_finish:
   - bash.exe ./pkgdown/build-dll.sh
-  - bash.exe ./pkgdown/build-site.sh
+  - Rscript.exe --verbose ./pkgdown/build-site.R
   - bash.exe ./pkgdown/deploy.sh
 
 on_failure:
