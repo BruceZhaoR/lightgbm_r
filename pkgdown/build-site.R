@@ -24,7 +24,7 @@ build_reference(preview = FALSE)
 #                     override = list(), preview = NA, new_process = FALSE)
 
 # add artifacts
-devtools::build(binary = TRUE, args = c('--preclean', "--keep-empty-dirs"))
+devtools::build(binary = TRUE, args = c("--preclean", "--no-multiarch", "--keep-empty-dirs"))
 version <- gsub("Version: ","",grep("Version: ",readLines(con = file.path(".", "DESCRIPTION")),value = TRUE))
 file.copy(file.path("..", sprintf("lightgbm_%s.tar.gz", version)),".")
 file.copy(file.path("..", sprintf("lightgbm_%s.zip", version)),".")
