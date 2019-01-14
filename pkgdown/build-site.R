@@ -1,4 +1,5 @@
-setwd(".")
+getwd()
+setwd("C:/projects/lightgbm-r/")
 devtools::document()
 
 if (!dir.exists("./docs")) {
