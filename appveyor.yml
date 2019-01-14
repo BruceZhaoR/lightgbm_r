@@ -22,24 +22,21 @@ environment:
       GCC_PATH: mingw_64
       CRAN: https://cran.rstudio.com
 
+before_build：
+  - cinst pandoc
+  - ps: $env:Path += ";C:\Program Files (x86)\Pandoc\"
+  - pandoc -v
+
 build_script:
   - travis-tool.sh install_deps
   - bash.exe ./pkgdown/install-pkgs.sh
-
-before_test:
-  - ps: >-
-      if (-Not (Test-Path "C:\Program Files (x86)\Pandoc\")) {
-        cinst pandoc
-      }
-  - ps: $env:Path += ";C:\Program Files (x86)\Pandoc\"
-  - pandoc -v
+  - bash.exe ./pkgdown/build-dll.sh
+  - Rscript.exe --verbose ./pkgdown/build-site.R
 
 #test_script:
 #  - travis-tool.sh run_tests
 
 on_finish:
-  - bash.exe ./pkgdown/build-dll.sh
-  - Rscript.exe --verbose ./pkgdown/build-site.R
   - bash.exe ./pkgdown/deploy.sh
 
 on_failure:
