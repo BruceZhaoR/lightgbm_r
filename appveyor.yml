@@ -12,10 +12,11 @@ install:
 
 cache:
   - C:\RLibrary
-  - C:\Program Files (x86)\Pandoc\
+  - C:\Program Files (x86)\Pandoc
 
 # Adapt as necessary starting from here
 environment:
+  image: Visual Studio 2017
   matrix:
     - R_VERSION: stable
       R_ARCH: x64
