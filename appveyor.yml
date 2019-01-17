@@ -21,6 +21,7 @@ cache:
 # Adapt as necessary starting from here
 
 # Build worker image (VM template)
+max_jobs: 2
 image: Visual Studio 2015
 
 environment:
@@ -30,8 +31,7 @@ environment:
       GCC_PATH: mingw_64
       CRAN: https://cran.rstudio.com
 
-platform:
-  - x64
+platform: x64
 
 build_script:
   - pandoc -v
