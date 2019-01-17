@@ -5,8 +5,8 @@ Version: 2.2.3
 Date: 2018-11-6
 Authors@R: c(
 	person("Guolin", "Ke", email = "guolin.ke@microsoft.com", role = c("aut", "cre")),
-	person("Damien", "Soukhavong", email = "damien.soukhavong@skema.edu", role = c("ctb")),
-	person("Yachen", "Yan", role = c("ctb")),
+	person("Damien", "Soukhavong", email = "damien.soukhavong@skema.edu", role = c("aut", "ctb")),
+	person("Yachen", "Yan", role = c("aut", "ctb")),
 	person("James", "Lamb", email="james.lamb@uptake.com", role = c("ctb"))
 	)
 Description: Tree based algorithms can be improved by introducing boosting frameworks. LightGBM is one such framework, and this package offers an R interface to work with it.
