@@ -14,11 +14,16 @@ install:
 
 cache:
   - C:\RLibrary
+  - C:\ProgramData\chocolatey\bin -> appveyor.yml
+  - C:\ProgramData\chocolatey\lib -> appveyor.yml
   - C:\Program Files\Pandoc\
 
 # Adapt as necessary starting from here
+
+# Build worker image (VM template)
+image: Visual Studio 2015
+
 environment:
-  image: Visual Studio 2015
   matrix:
     - R_VERSION: stable
       R_ARCH: x64
